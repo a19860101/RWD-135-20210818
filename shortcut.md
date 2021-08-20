@@ -7,6 +7,8 @@
 
 ## VS CODE
 
+PC/MAC
+
 - Ctrl/Cmd + S 存檔
 - Ctrl/Cmd + / 註解
 - Alt/Option  + Z 自動換行
@@ -20,4 +22,6 @@
 - Ctrl/Cmd + Shift + K 刪除行
 - Alt/Option + Shift + 下 向下複製
 - Alt/Option + Shift + 上 向上複製
+- Tab 下一階
+- Shift + Tab 上一階 
   
