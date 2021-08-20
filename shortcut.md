@@ -7,17 +7,17 @@
 
 ## VS CODE
 
-- Ctrl + S 存檔
-- Ctrl + / 註解
-- Alt  + Z 自動換行
-- Ctrl + B 開關左側區塊
-- Ctrl + D 選取相同文字
-- Ctrl + L 選取行
-- Ctrl + Z 回復
-- Ctrl + X 剪下
-- Ctrl + V 貼上
-- Ctrl + Shift + Z 往前
-- Ctrl + Shift + K 刪除行
-- Alt + Shift + 下 向下複製
-- Alt + Shift + 上 向上複製
+- Ctrl/Cmd + S 存檔
+- Ctrl/Cmd + / 註解
+- Alt/Option  + Z 自動換行
+- Ctrl/Cmd + B 開關左側區塊
+- Ctrl/Cmd + D 選取相同文字
+- Ctrl/Cmd + L 選取行
+- Ctrl/Cmd + Z 回復
+- Ctrl/Cmd + X 剪下
+- Ctrl/Cmd + V 貼上
+- Ctrl/Cmd + Shift + Z 往前
+- Ctrl/Cmd + Shift + K 刪除行
+- Alt/Option + Shift + 下 向下複製
+- Alt/Option + Shift + 上 向上複製
   
