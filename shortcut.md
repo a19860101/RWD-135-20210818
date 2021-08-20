@@ -14,6 +14,8 @@
 - Ctrl + D 選取相同文字
 - Ctrl + L 選取行
 - Ctrl + Z 回復
+- Ctrl + X 剪下
+- Ctrl + V 貼上
 - Ctrl + Shift + Z 往前
 - Ctrl + Shift + K 刪除行
 - Alt + Shift + 下 向下複製
