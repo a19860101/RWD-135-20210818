@@ -2,8 +2,10 @@
 
 ## 瀏覽器
 
+PC/MAC
+
 - Ctrl + U 查看原始碼
-- F12 開發者工具
+- F12 / Cmd + Option + I  開發者工具
 
 ## VS CODE
 
