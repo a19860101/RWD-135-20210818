@@ -12,6 +12,14 @@
         .container {
             width: 1200px;
             margin: auto;
+            background-color: #e04;
+
+            /* 方法一 */
+            /* height: 400px; */
+            /* 方法二 */
+            overflow: auto;
+            /* 方法三 */
+            /* display: flow-root; */
         }
         .box {
             width: calc(100% / 3);
@@ -22,6 +30,11 @@
             background-color: #ccc;
             padding: 15px;
         }
+        /* 
+            父元素崩塌
+            當所有子元素都是浮動時，父元素的高度會消失(歸零)
+        
+        */
     </style>
 </head>
 <body>
@@ -36,6 +49,8 @@
             <div class="content">
                 <h2>title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt inventore quidem dolore? Provident, excepturi doloremque fugiat reprehenderit ipsam maiores molestiae iusto explicabo veritatis, deserunt consequuntur at, ut eos odio exercitationem!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt inventore quidem dolore? Provident, excepturi doloremque fugiat reprehenderit ipsam maiores molestiae iusto explicabo veritatis, deserunt consequuntur at, ut eos odio exercitationem!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt inventore quidem dolore? Provident, excepturi doloremque fugiat reprehenderit ipsam maiores molestiae iusto explicabo veritatis, deserunt consequuntur at, ut eos odio exercitationem!</p>
             </div>
         </div>
         <div class="box">
@@ -44,6 +59,10 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt inventore quidem dolore? Provident, excepturi doloremque fugiat reprehenderit ipsam maiores molestiae iusto explicabo veritatis, deserunt consequuntur at, ut eos odio exercitationem!</p>
             </div>
         </div>
+    </div>
+    <div>
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptates quae suscipit cumque vero quos, illo similique recusandae animi quasi, ut quam commodi, optio fuga? Quis aut amet officiis dolore.</p>
     </div>
 </body>
 </html>
