@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin: auto;
+            background-color: #ccc;
+
+            justify-content: space-evenly;
+            /* 
+                flex-start, flex-end, center
+                space-around, space-between, space-evenly
+            */
+
+        }
+        .box {
+            width: calc(100% / 5);
+            padding: 15px;
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet totam sapiente ab natus eligendi inventore, quas laborum magni pariatur quisquam. Molestiae rem alias sunt. Veritatis laboriosam ex nobis tenetur.</p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet totam sapiente ab natus eligendi inventore, quas laborum magni pariatur quisquam. Molestiae rem alias sunt. Veritatis laboriosam ex nobis tenetur.</p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet totam sapiente ab natus eligendi inventore, quas laborum magni pariatur quisquam. Molestiae rem alias sunt. Veritatis laboriosam ex nobis tenetur.</p>
+        </div>
+    </div>
+</body>
+</html>
