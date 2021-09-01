@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 2000px;
+        }
         .container {
             width: 800px;
             height: 800px;
             background-color: #ccc;
+            position: relative;
         }
-        .box1 {
+        .box {
             width: 150px;
             height: 150px;
+            border: 1px solid #000;
+        }
+        .box1 {
+
             background-color: #ff6d6d;
             position: relative;
             top: 30px;
@@ -21,13 +29,23 @@
             z-index: 10;
         }
         .box2 {
-            width: 150px;
-            height: 150px;
             background-color: #ffdd6d;
             position: relative;
             z-index: 9;
         }
         /* top,bottom,right,left,z-index */
+        .box3 {
+            background-color: #1dffc7;
+            position: absolute;
+            bottom:0;
+            right: 0;
+            z-index: 11;
+        }
+        .box4 {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -35,13 +53,15 @@
         定位 position
         1. Static 靜態
         2. Relative 相對
-        3. Absolute 絕對
+        3. Absolute 絕對 (相對定位可以控制絕對定位)
         4. Fixed 固定
         5. Sticky 黏性
     -->
     <div class="container">
-        <div class="box1"></div>
-        <div class="box2"></div>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
     </div>
+    <div class="box box4"></div>
 </body>
 </html>
