@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 800px;
+            background-color: #ccc;
+        }
+        .box1 {
+            width: 150px;
+            height: 150px;
+            background-color: #ff6d6d;
+            position: relative;
+            top: 30px;
+            left: 30px;
+            z-index: 10;
+        }
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background-color: #ffdd6d;
+            position: relative;
+            z-index: 9;
+        }
+        /* top,bottom,right,left,z-index */
+    </style>
+</head>
+<body>
+    <!-- 
+        定位 position
+        1. Static 靜態
+        2. Relative 相對
+        3. Absolute 絕對
+        4. Fixed 固定
+        5. Sticky 黏性
+    -->
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
