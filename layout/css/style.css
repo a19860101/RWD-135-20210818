@@ -90,6 +90,10 @@ header p {
     padding: 8px 15px;
     border-radius:5px
 }
+/* 虛擬類別 */
+#about a:hover {
+    background-color: #FFB319;
+}
 /* 虛擬元素 */
 #about h2::before {
     content:'';
