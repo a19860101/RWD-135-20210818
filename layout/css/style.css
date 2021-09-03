@@ -1,0 +1,13 @@
+/* nav */
+nav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #222;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
