@@ -64,13 +64,36 @@ header p {
     padding-top: 150px;
     padding-bottom: 150px;
 }
-#about h2 {
+.section-title {
     border-bottom: 1px solid #FFB319;
     padding-bottom: 30px;
     margin-bottom: 30px;
     font-size: 32px;
 
     position: relative;
+}
+/* 虛擬元素 */
+.section-title::before {
+    content:'';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #FFB319;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 50%;
+}
+.section-title::after {
+    content:'';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #FFB319;
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    border-radius: 50%;
 }
 #about h3 {
     margin-bottom: 15px;
@@ -94,26 +117,17 @@ header p {
 #about a:hover {
     background-color: #FFB319;
 }
-/* 虛擬元素 */
-#about h2::before {
-    content:'';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-color: #FFB319;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    border-radius: 50%;
+/* product */
+#product {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: #E8F6EF;
 }
-#about h2::after {
-    content:'';
+#product a {
+    text-decoration: none;
+    color: #000;
     display: inline-block;
-    width: 16px;
-    height: 16px;
     background-color: #FFB319;
-    position: absolute;
-    right: 0;
-    bottom: -8px;
-    border-radius: 50%;
+    padding: 8px 15px;
+    border-radius:5px
 }
