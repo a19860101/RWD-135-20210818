@@ -123,3 +123,17 @@ header p {
     padding-bottom: 150px;
     background-color: #E8F6EF;
 }
+.product-title {
+    margin-bottom: 5px;
+}
+.product-price {
+    margin-bottom: 5px;
+}
+.product-content {
+    position: relative;
+}
+.product-content a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
