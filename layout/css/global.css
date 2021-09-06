@@ -106,3 +106,7 @@ time, mark, audio, video {
 .btn-red:hover {
 	background-color: #ff6b84;
 }
+
+.btn-green {
+	background-color: var(--green);
+}

@@ -137,3 +137,8 @@ header p {
     right: 0;
     bottom: 0;
 }
+/* blog */
+#blog {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
