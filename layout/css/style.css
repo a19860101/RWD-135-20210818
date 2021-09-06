@@ -142,3 +142,7 @@ header p {
     padding-top: 150px;
     padding-bottom: 150px;
 }
+.blog-content p {
+    margin: 15px 0;
+    line-height: 1.7;;
+}
