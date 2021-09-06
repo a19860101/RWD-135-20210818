@@ -11,8 +11,17 @@
             height: 200px;
             background-color: #fa0;
 
-            transform: scale(.5)rotate(45deg);
+            /* transform: scale(.5)rotate(45deg); */
             /* scale(),translate(),rotate(),skew() */
+
+            transform:perspective(800px)skewY(45deg) ;
+            /* 
+                perspective()
+                scaleX(),scaleY(),scaleZ(); 
+                translateX(),translateY(),translateZ(); 
+                rotateX(),rotateY(),rotateZ(); 
+                skewX(),skewY(); 
+            */
 
             margin: auto;
         }
