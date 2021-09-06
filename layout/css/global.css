@@ -89,7 +89,9 @@ time, mark, audio, video {
     display: inline-block;
     padding: 8px 15px;
     border-radius:5px;
-	font-size: 15px;	
+	font-size: 15px;
+	border: 0;	
+	cursor: pointer;
 }
 
 .btn-orange {

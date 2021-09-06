@@ -147,6 +147,11 @@ header p {
     line-height: 1.7;;
 }
 /* contact */
+#contact {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: #E8F6EF;
+}
 .form-label {
     width: 100%;
     display: inline-block;
@@ -158,4 +163,9 @@ header p {
     padding: 8px 5px;
     border: 1px solid #aaa;
     border-radius: 5px;
+    outline: 0;
+}
+/* 虛擬類別 */
+.form-control:focus {
+    border: 1px solid var(--orange);
 }
