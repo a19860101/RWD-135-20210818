@@ -1,3 +1,13 @@
+:root {
+	--blue:#2390da;
+	--green: #2ac37c;
+	--red: #ff153c;
+	--orange: #FFB319;
+	--dark:#0f0f0f;
+	--light: #e4e4e4;
+	--black: #000;
+	--white: #fff;
+}
 * {
     box-sizing: border-box;
     font-family: "Segoe ui","Microsoft Jhenghei";
@@ -82,14 +92,14 @@ time, mark, audio, video {
 }
 
 .btn-orange {
-	background-color: #FFB319;
+	background-color: var(--orange);
 }
 .btn-orange:hover {
 	background-color: #FFE194;
 }
 
 .btn-red {
-	background-color: #e63e5a;
+	background-color: var(--red);
 	color: #fff;
 }
 .btn-red:hover {
