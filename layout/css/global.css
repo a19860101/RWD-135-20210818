@@ -71,3 +71,27 @@ time, mark, audio, video {
 .align-items-center {
 	align-items: center;
 }
+
+/* btn group */
+.btn {
+	text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius:5px
+}
+
+.btn-orange {
+	background-color: #FFB319;
+}
+.btn-orange:hover {
+	background-color: #FFE194;
+}
+
+.btn-red {
+	background-color: #e63e5a;
+	color: #fff;
+}
+.btn-red:hover {
+	background-color: #ff6b84;
+}
