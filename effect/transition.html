@@ -12,19 +12,26 @@
             margin: auto;
             background-color: #fa0;
             /* transition: .5s; */
-            transition-property: transform,background-color;
+            /* transition-property: transform,background-color;
             transition-duration: 1s;
-            transition-delay: 1s;
-            transition-timing-function: linear;
+            transition-delay: 0s,1s;
+            transition-timing-function: ease; */
             /* ease, ease-in, ease-out, ease-in-out, linear */
+            transition: 
+                transform 1s 0s ,
+                background-color 1s .5s,
+                border-radius 1s 1s;
         }
         .box:hover {
             background-color: #0af;
             transform: rotate(180deg);
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="box">
+        BOX
+    </div>
 </body>
 </html>
