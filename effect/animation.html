@@ -13,11 +13,11 @@
 
             /* margin:20% auto; */
 
-            animation-name: rotate;
+            animation-name: go;
             animation-duration: 5s;
             animation-fill-mode: forwards;
             /* forwards */
-            animation-direction: alternate-reverse;
+            animation-direction: normal;
             /* normal, reverse, alternate, alternate-reverse */
             animation-iteration-count: infinite;
             /* infinite */
@@ -44,6 +44,13 @@
             to {
                 transform: translate(600px, 400px);
             }
+        }
+        @keyframes go {
+            0% {transform: translate(0,0)rotate(0deg);}
+            25% {transform: translate(400px,0)rotate(-90deg);}
+            50% {transform: translate(400px,400px)rotate(-180deg);}
+            75% {transform: translate(0,400px)rotate(-270deg);}
+            100% {transform: translate(0,0)rotate(-360deg);}
         }
     </style>
 </head>
