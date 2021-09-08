@@ -11,16 +11,26 @@
             height: 200px;
             position: relative;
             perspective: 800px;
+            margin: 20% auto;
         }
+        
         .cube {
             position: absolute;
             width: 100%;
             height: 100%;
+            transform-style: preserve-3d;
+            /* 預置3D */
+            transition: 1s;    
+            
+        }
+        .space:hover .cube {
+            transform: rotateX(145deg)rotateY(160deg);
         }
         .cube div {
             width: 100%;
             height: 100%;
             position: absolute;
+            /* opacity: .5; */
         }
         .front {background-color: #FF2442;}
         .back {background-color: #FFB830;}
@@ -28,6 +38,25 @@
         .right {background-color: #80ED99;}
         .top {background-color: #3D087B;}
         .bottom {background-color: #FFE459;}
+
+        .front {
+            transform: translateZ(100px);
+        }
+        .back {
+            transform: rotateX(180deg)translateZ(100px);
+        }
+        .left {
+            transform:rotateY(-90deg)translateZ(100px);
+        }
+        .right {
+            transform:rotateY(90deg)translateZ(100px);
+        }
+        .top {
+            transform:rotateX(90deg)translateZ(100px);
+        }
+        .bottom {
+            transform:rotateX(-90deg)translateZ(100px);
+        }
     </style>
 </head>
 <body>
