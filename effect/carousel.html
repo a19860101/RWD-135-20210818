@@ -22,7 +22,7 @@
             /* 預置3D */
             transition: 10s;    
 
-            animation: rotate 10s infinite linear;
+            animation: slider 10s infinite;
             
         }
         /* .space:hover .carousel { */
@@ -70,6 +70,21 @@
             to {
                 transform: rotateY(360deg);
             }
+        }
+        @keyframes slider {
+            0%    {transform: rotateY(calc(360deg / 6 * 0));}
+            8.3%  {transform: rotateY(calc(360deg / 6 * 0));}
+            16.6% {transform: rotateY(calc(360deg / 6 * 1));}
+            24.9% {transform: rotateY(calc(360deg / 6 * 1));}
+            33.2% {transform: rotateY(calc(360deg / 6 * 2));}
+            41.5% {transform: rotateY(calc(360deg / 6 * 2));}
+            49.8% {transform: rotateY(calc(360deg / 6 * 3));}
+            58.1% {transform: rotateY(calc(360deg / 6 * 3));}
+            66.4% {transform: rotateY(calc(360deg / 6 * 4));}
+            74.7% {transform: rotateY(calc(360deg / 6 * 4));}
+            83%   {transform: rotateY(calc(360deg / 6 * 5));}
+            91.3% {transform: rotateY(calc(360deg / 6 * 5));}
+            100%  {transform: rotateY(calc(360deg / 6 * 6));}
         }
     </style>
 </head>
