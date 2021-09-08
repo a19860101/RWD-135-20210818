@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .space {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            perspective: 800px;
+        }
+        .cube {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .cube div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .front {background-color: #FF2442;}
+        .back {background-color: #FFB830;}
+        .left {background-color: #3DB2FF;}
+        .right {background-color: #80ED99;}
+        .top {background-color: #3D087B;}
+        .bottom {background-color: #FFE459;}
+    </style>
+</head>
+<body>
+    <div class="space">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
