@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
+        /* 視埠寬度 */
         /* mobile first */
         * {
             box-sizing: border-box;
         }
+
         .container {
             max-width: 1000px;
             margin: auto;
@@ -17,8 +20,13 @@
             flex-wrap: wrap;
         }
         .box {
-            flex:0 0 50%;
+            flex:0 0 100%;
             padding: 15px;
+        }
+        @media(min-width: 600px){
+            .box {
+                flex:0 0 50%;
+            }
         }
         @media(min-width:1000px){
             .box {
