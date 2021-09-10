@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* mobile first */
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex:0 0 50%;
+            padding: 15px;
+        }
+        @media(min-width:1000px){
+            .box {
+                flex: 0 0 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus adipisci error atque vero facilis, voluptatum beatae aperiam ut a sed consectetur maiores! Ut quas, nobis repellendus reprehenderit aliquam soluta?</p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus adipisci error atque vero facilis, voluptatum beatae aperiam ut a sed consectetur maiores! Ut quas, nobis repellendus reprehenderit aliquam soluta?</p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus adipisci error atque vero facilis, voluptatum beatae aperiam ut a sed consectetur maiores! Ut quas, nobis repellendus reprehenderit aliquam soluta?</p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis natus adipisci error atque vero facilis, voluptatum beatae aperiam ut a sed consectetur maiores! Ut quas, nobis repellendus reprehenderit aliquam soluta?</p>
+        </div>
+    </div>
+</body>
+</html>
