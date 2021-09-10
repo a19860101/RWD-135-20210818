@@ -3,6 +3,7 @@ nav {
     background-color: #B8DFD8;
     padding-top: 15px;
     padding-bottom: 15px;
+    position: relative;
 }
 nav .logo {
     margin-bottom: 15px;
@@ -19,11 +20,23 @@ nav a {
     padding-bottom: 10px;
     text-align: left;
 }
+.nav-toggle {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: #f00;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
 @media(min-width: 520px){
     nav a {
         display: inline-block;
         padding-bottom: 0px;
         text-align: center;
+    }
+    .nav-toggle {
+        display: none;
     }
 }
 
