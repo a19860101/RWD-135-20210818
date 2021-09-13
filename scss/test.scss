@@ -37,3 +37,11 @@ $columns: 12;
         flex:0 0 calc(100% * 12 / #{$i})
     }
 }
+
+// @each 
+$sizes: 480px, 720px, 960px, 1200px;
+@each $size in $sizes {
+    .container-#{$size} {
+        width: $size;
+    }
+}

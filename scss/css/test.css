@@ -74,4 +74,20 @@
 .col-12 {
   flex: 0 0 calc(100% * 12 / 12);
 }
+
+.container-480px {
+  width: 480px;
+}
+
+.container-720px {
+  width: 720px;
+}
+
+.container-960px {
+  width: 960px;
+}
+
+.container-1200px {
+  width: 1200px;
+}
 /*# sourceMappingURL=test.css.map */
