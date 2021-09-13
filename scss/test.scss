@@ -30,3 +30,10 @@ $columns: 12;
         font-size: 24px;
     }
 }
+//@for 迴圈 重複執行
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        flex:0 0 calc(100% * 12 / #{$i})
+    }
+}
