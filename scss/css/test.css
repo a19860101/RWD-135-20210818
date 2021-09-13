@@ -451,4 +451,6 @@
 .ml-auto { margin-left: auto; }
 
 .mr-auto { margin-right: auto; }
+
+.test { width: 100px; height: 200px; background-color: #765; display: block; }
 /*# sourceMappingURL=test.css.map */
