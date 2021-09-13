@@ -39,9 +39,29 @@ $columns: 12;
 }
 
 // @each 
-$sizes: 480px, 720px, 960px, 1200px;
-@each $size in $sizes {
-    .container-#{$size} {
-        width: $size;
+// $sizes: 480px, 720px, 960px, 1200px;
+// @each $size in $sizes {
+//     .container-#{$size} {
+//         width: $size;
+//     }
+// }
+
+$sizes: (
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px
+);
+@each $name, $width in $sizes {
+    .container-#{$name}{
+        width: $width;
+        margin: auto;
+    }
+
+    @for $i from 1 through 12 {
+        .col-#{$name}-#{$i}{
+            flex:0 0 calc(100% / #{$columns} * #{$i});
+        }
     }
 }
+
