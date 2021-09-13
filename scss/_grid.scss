@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+}
+@each $name,$width in $sizes {
+    .container-#{$name}{
+        width: 100%;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        flex: 0 0 (100% / 12 * $i);
+    }
+}
+@each $name,$width in $sizes {
+    @media(min-width:$width){
+        .container,.container-#{$name}{
+            max-width: $width;
+            margin: auto;
+        }
+        @for $i from 1 through 12 {
+            .col-#{$name}-#{$i}{
+                flex: 0 0 (100% / 12 * $i);
+            }
+        }
+    }
+}
+[class^="col"]{
+    padding-left: 15px;
+    padding-right: 15px;
+}
