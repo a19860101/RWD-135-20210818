@@ -1,7 +1,7 @@
 $red: 'red';
 $yellow: #fff241;
 $blue: #00b7ff;
-$spacing: 15px;
+$spacing: 5px;
 $columns: 12;
 
 .btn {
@@ -62,6 +62,38 @@ $sizes: (
         .col-#{$name}-#{$i}{
             flex:0 0 calc(100% / #{$columns} * #{$i});
         }
+    }
+}
+$direction:(
+    "left":"l",
+    "right":"r",
+    "top":"t",
+    "bottom":"b",
+);
+@each $dName,$d in $direction {
+    
+    @for $i from 1 through 9 {
+        .m-#{$i}{
+            margin: $spacing * $i;
+        }
+        .m#{$d}-#{$i}{
+            margin-#{$dName}: $spacing * $i
+        }
+        .p-#{$i}{
+            padding: $spacing * $i;
+        }
+        .p#{$d}-#{$i}{
+            padding-#{$dName}: $spacing * $i
+        }
+    }
+    .m-auto {
+        margin: auto;
+    }
+    .ml-auto {
+        margin-left: auto;
+    }
+    .mr-auto {
+        margin-right: auto;
     }
 }
 
