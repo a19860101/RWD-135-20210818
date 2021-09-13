@@ -1,6 +1,10 @@
 .container {
     width: 100%;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
 @each $name,$width in $sizes {
     .container-#{$name}{
         width: 100%;
