@@ -26,4 +26,5 @@ PC/MAC
 - Alt/Option + Shift + 上 向上複製
 - Tab 下一階
 - Shift + Tab 上一階 
+- Alt + Shift + F 格式化程式碼
   
