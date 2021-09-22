@@ -30,8 +30,16 @@ console.log(a != b);
 
 //指定運算子
 
-console.log(a += b);//a = a + b = 13
-console.log(a -= b);//a = a - b = 10
-console.log(a *= b);//a = a * b = 30
-console.log(a /= b);//a = a / b = 10
-console.log(a %= b);//a = a % b = 1
+// console.log(a += b);//a = a + b = 13
+// console.log(a -= b);//a = a - b = 10
+// console.log(a *= b);//a = a * b = 30
+// console.log(a /= b);//a = a / b = 10
+// console.log(a %= b);//a = a % b = 1
+
+//邏輯運算子 and,or,not
+console.log(a > 0 && b > 0);
+console.log(a > 0 && b < 0);
+console.log(a > 0 || b < 0);
+
+let i = 12;
+console.log(!i);
