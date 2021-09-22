@@ -58,3 +58,9 @@ switch(true){
     default:
         console.log('error');
 }
+
+let score =86;
+// let result = score >= 60 ? '及格':'不及格';
+let result = score >= 80 ? '優良': score >= 60 ? '普通' : '有待加強' ;
+
+console.log(result);
