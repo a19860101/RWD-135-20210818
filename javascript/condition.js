@@ -1,5 +1,5 @@
 //if
-let x =1;
+let x = 0;
 
 if(x > 0){
     console.log('a: success');
@@ -31,4 +31,30 @@ if(x > 10){
     console.log('C');
 }else{
     console.log('不及格');
+}
+
+//switch
+switch(x){
+    case 0:
+        console.log(0);
+        break;
+    case 10:
+        console.log(10);
+        break;
+    case 100:
+        console.log(100);
+        break;
+    default:
+        console.log('Default');
+}
+
+switch(true){
+    case x>0:
+        console.log('正數');
+        break;
+    case x<0:
+        console.log('負數');
+        break;
+    default:
+        console.log('error');
 }
