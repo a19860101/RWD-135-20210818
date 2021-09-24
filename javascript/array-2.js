@@ -23,3 +23,11 @@ const scores_filter = scores.filter(function(data){
     return data != 68;
 })
 console.log(scores_filter);
+
+//reduce
+const scores_reduce = scores.reduce(function(a,b){
+    console.log(a);
+    console.log(b);
+    return a+b;
+})
+console.log(scores_reduce);
