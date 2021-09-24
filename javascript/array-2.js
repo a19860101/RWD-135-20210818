@@ -15,3 +15,11 @@ const scores_map = scores.map(function(data){
     }
 })
 console.log(scores_map);
+
+//filter
+
+const scores_filter = scores.filter(function(data){
+    // return data < 60;
+    return data != 68;
+})
+console.log(scores_filter);
