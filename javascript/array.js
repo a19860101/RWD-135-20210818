@@ -52,7 +52,7 @@ a.push('hello');
 a.unshift('test');
 a.shift();
 
-//join(),split()
+//toString(),join(),split()
 let a_str = a.join('@');
 console.log(a_str);
 let astr = a.toString('@');
@@ -62,4 +62,10 @@ let str = 'aaa,bbb,ccc,ddd';
 let str_array = str.split(',');
 console.log(str_array);
 
+//splice(),slice()
 console.log(a);
+// a.splice(4,1);
+// console.log(a);
+
+const a_slice = a.slice(1,3);
+console.log(a_slice);
