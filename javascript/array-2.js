@@ -31,3 +31,13 @@ const scores_reduce = scores.reduce(function(a,b){
     return a+b;
 })
 console.log(scores_reduce);
+
+//concat
+// const test = drinks.concat(scores);
+// const test = scores.concat(drinks);
+// console.log(test);
+
+// spread operator
+// const test = [...scores,...drinks];
+const test = [...drinks,'hello',...scores,'hello'];
+console.log(test);
