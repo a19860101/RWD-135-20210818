@@ -18,20 +18,31 @@ const users = [
     {
         id: 1,
         name: 'john',
-        mail: 'john@gmail.com'
+        mail: 'john@gmail.com',
+        gender: 'male'
     },{
         id:2,
         name:'Mary',
-        mail:'maryyyy@gmail.com'
+        mail:'maryyyy@gmail.com',
+        gender:'female'
     },{
         id:3,
         name:'Max',
-        mail:'xxx@gmail.com'
+        mail:'xxx@gmail.com',
+        gender:'male'
     }
 ];
-console.log(users);
-users.forEach(function(user){
-    console.log(user.id);
-    console.log(user.name);
-    console.log(user.mail);
+// console.log(users);
+// users.forEach(function(user){
+//     console.log(user.id);
+//     console.log(user.name);
+//     console.log(user.mail);
+// })
+const userName = users.map(function(user){
+    return user.name;
 })
+console.log(userName);
+const male = users.filter(function(user){
+    return user.gender == 'male';
+});
+console.log(male);
