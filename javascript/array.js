@@ -51,4 +51,15 @@ a.push('hello');
 //unshift(),shift()
 a.unshift('test');
 a.shift();
+
+//join(),split()
+let a_str = a.join('@');
+console.log(a_str);
+let astr = a.toString('@');
+console.log(astr);
+
+let str = 'aaa,bbb,ccc,ddd';
+let str_array = str.split(',');
+console.log(str_array);
+
 console.log(a);
