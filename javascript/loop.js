@@ -12,3 +12,6 @@ while(j < 10){
     j += 2;
     console.log(j);
 }
+
+//for...of
+//for...in
