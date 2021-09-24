@@ -46,3 +46,31 @@ const male = users.filter(function(user){
     return user.gender == 'male';
 });
 console.log(male);
+
+const cart = [
+    {
+        name:'iPhone13 128G',
+        price:25900
+    },
+    {
+        name:'iPad Air 128G',
+        price: 14900
+    }
+]
+const cartPriceArray = cart.map(function(data){
+    return data.price;
+}) 
+console.log(cartPriceArray);
+
+const total = cartPriceArray.reduce(function(a,b){
+    return a + b;
+});
+console.log(total);
+
+const totalPrice = cart.map(function(data){
+    return data.price;
+}).reduce(function(a,b){
+    return a + b;
+})
+
+console.log(totalPrice);
