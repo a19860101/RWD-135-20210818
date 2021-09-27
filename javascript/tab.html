@@ -79,13 +79,24 @@
     <script>
         const tabLinks = document.querySelectorAll('.tab-link');
         for(let tabLink of tabLinks){
+            // 一般函式
             tabLink.onclick = function(){
                 for(let tabLink of tabLinks){
                     tabLink.classList.remove('active');
                 }
                 this.classList.add('active');
             }
+
+            //箭頭函式
+            // tabLink.onclick = e => {
+            //     for(let tabLink of tabLinks){
+            //         tabLink.classList.remove('active');
+            //     }
+            //     e.target.classList.add('active');
+            // }
         }
+
+
     </script>
 </body>
 </html>
