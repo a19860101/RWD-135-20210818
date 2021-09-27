@@ -28,5 +28,40 @@ function f4(x,y){
 
 console.log(f4(10,8));
 
+//箭頭函式
+
+// const foo = function(){
+//     return 'hello';
+// }
+
+const foo = () => {
+    return 'hello';
+}
+console.log(foo());
+
+//一個參數 -> 小括號可省略
+
+const foo2 = x => {
+    return x;
+}
+console.log(foo2(1123))
+
+//多個參數 -> 小括號不可省略
+
+const foo3 = (x,y) => {
+    return x + y;
+}
+console.log(foo3(2,4));
+
+//如果後方只有return -> 大括號與return 可省略
+
+const foo4 = (x,y) => x + y;
+
+console.log(foo4(9,8));
+
+const foo5 = x => x*x;
+console.log(foo5(11));
+
+
 
 
