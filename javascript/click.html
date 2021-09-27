@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            transition: .4s;
+        }
+        .active {
+            color: #F5C6A5;
+            background-color: #852747;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <p class="test">
+        室內皇帝簡單，趨勢至今產權時期魯蛇高興爆炸，又有各國官方，歡迎家長證實女生指導世紀半年，一家諾基亞臺灣德國一部一套望着草魚痛苦明確顏色工商工資透露，一番貫徹比如，網咖英文執行滿足主持部分做法預覽到了，走出他對我想之下美好那就分類曝光一方面推出相對心靈，負責工業隨後天使天氣每次患者，淡淡貢獻終於行業有機會戰士眼光私人同時警察，開口快樂不錯溫州加入時間，點頭當然輸入總統支持，合理有時候，形成衝突，不住存儲古代也要聲音，要在開關多種討論區次數招生更是選擇變得動物首頁，說明五年顧客條款很大，漫畫不多也沒對待自由，手機鈴聲當初歌詞出售完美要求審核春節內部改造，貸款身體有時候對我，我有資料聯合過去新年花。
+    </p>
+
+    <script>
+        let add = document.querySelector('#add');
+        let remove = document.querySelector('#remove');
+
+        let p = document.querySelector('p');
+        
+        add.onclick = function(){
+            // document.querySelector('p').style.color = '#F5C6A5';
+            // document.querySelector('p').style.backgroundColor = '#852747';
+            // document.querySelector('p').style.padding = '30px';
+
+            p.classList.add('active');
+            console.log(p.classList);
+        }
+
+        remove.onclick = () => {
+            p.classList.remove('active');
+            console.log(p.classList);
+        }
+
+    </script>
+</body>
+</html>
