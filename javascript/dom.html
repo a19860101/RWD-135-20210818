@@ -24,18 +24,35 @@
     <a href="#">link</a>
 
     <script>
-        let title = document.getElementById('title');
-        console.log(title);
+        // let title = document.getElementById('title');
+        // console.log(title);
 
         // let title2 = document.getElementsByClassName('title2')[0];
         // console.log(title2);
 
-        let title2 = document.getElementsByClassName('title2');
-        console.log(title2[0]);
+        // let title2 = document.getElementsByClassName('title2');
+        // console.log(title2[0]);
 
-        let p = document.getElementsByTagName('p');
-        console.log(p[0])
-        console.log(p[1])
+        // let p = document.getElementsByTagName('p');
+        // console.log(p[0])
+        // console.log(p[1])
+
+        let title = document.querySelector('#title');
+        console.log(title);
+
+        let title2 = document.querySelector('.title2');
+        console.log(title2)
+
+        let p = document.querySelectorAll('p');
+        console.log(p[0]);
+        console.log(p[1]);
+
+        let item = document.querySelectorAll('.item');
+        console.log(item);
+        console.log(item[0]);
+        console.log(item[1]);
+        console.log(item[2]);
+        console.log(item[3]);
     </script>
 </body>
 </html>
