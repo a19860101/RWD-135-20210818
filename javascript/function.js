@@ -62,6 +62,34 @@ console.log(foo4(9,8));
 const foo5 = x => x*x;
 console.log(foo5(11));
 
+// 一般函式與箭頭函式差別
+
+const foo6 = function(){
+    return this;
+}
+console.log(foo6());
+
+const foo7 = () => {
+    return this
+}
+console.log(foo7());
+
+const obj = {
+    foo:function(){
+        return this;
+    }
+}
+console.log(obj.foo());
+
+
+const obj2 = {
+    foo:()=>{
+        return this;
+    }
+}
+console.log(obj2.foo());
+
+
 
 
 
