@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'segoe ui';
+        }
+        .collapse {
+            margin: 30px;
+            width: 300px;
+        }
+        .collapse-link {
+            background-color: #22577A;
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            color: #80ED99;
+            text-decoration: none;
+        }
+        .collapse-panel {
+            padding: 0 15px;
+            background-color: #38A3A5;
+            color: #0d2331;
+            height: 0;
+            overflow: hidden;
+        }
+        .collapse-panel.active {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="collapse">
+        <a href="#c1" class="collapse-link">link</a>
+        <div class="collapse-panel" id="c1">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat alias id dolore dolor ad maxime. Nostrum, aspernatur non magnam reprehenderit voluptatibus pariatur deserunt iusto, praesentium recusandae fuga suscipit aliquid maxime.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
