@@ -80,31 +80,41 @@
         const tabLinks = document.querySelectorAll('.tab-link');
         for(let tabLink of tabLinks){
             // 一般函式
-            tabLink.onclick = function(){
+            // tabLink.onclick = function(){
+            //     for(let tabLink of tabLinks){
+            //         tabLink.classList.remove('active');
+            //     }
+            //     this.classList.add('active');
+
+            //     let href = this.getAttribute('href');
+            //     let data = this.dataset.panel;
+                
+            //     let panels = document.querySelectorAll('.tab-panel');
+            //     for(let panel of panels){
+            //         panel.classList.remove('active');
+            //     }
+
+            //     document.querySelector(href).classList.add('active');
+            //     document.querySelector(data).classList.add('active');
+            // }
+
+            //箭頭函式
+            tabLink.onclick = e => {
                 for(let tabLink of tabLinks){
                     tabLink.classList.remove('active');
                 }
-                this.classList.add('active');
+                e.target.classList.add('active');
 
-                let href = this.getAttribute('href');
-                let data = this.dataset.panel;
-                
+                let href = e.target.getAttribute('href');
+                let data = e.target.dataset.panel;
                 let panels = document.querySelectorAll('.tab-panel');
                 for(let panel of panels){
                     panel.classList.remove('active');
                 }
-
                 // document.querySelector(href).classList.add('active');
                 document.querySelector(data).classList.add('active');
-            }
 
-            //箭頭函式
-            // tabLink.onclick = e => {
-            //     for(let tabLink of tabLinks){
-            //         tabLink.classList.remove('active');
-            //     }
-            //     e.target.classList.add('active');
-            // }
+            }
         }
 
 
