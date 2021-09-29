@@ -25,14 +25,16 @@
             text-decoration: none;
         }
         .collapse-panel {
-            padding: 0 15px;
             background-color: #38A3A5;
             color: #0d2331;
             height: 0;
             overflow: hidden;
-        }
-        .collapse-panel.active {
+            transition: .3s;
             padding: 15px;
+           
+        }
+        .collapse-panel.active{
+            /* padding:15px 15px; */
         }
     </style>
 </head>
@@ -45,5 +47,23 @@
             </p>
         </div>
     </div>
+    <script>
+        let link = document.querySelectorAll('.collapse-link');
+        link.forEach(btn => {
+            btn.onclick = e => {
+                let href = e.target.getAttribute('href');
+                let panel = document.querySelector(href);
+                
+                panel.classList.toggle('active');
+
+                if(panel.style.height){
+                    panel.style.height = null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
+
+            }
+        })
+    </script>
 </body>
 </html>
