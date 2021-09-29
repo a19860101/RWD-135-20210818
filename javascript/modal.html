@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .modal {
-            /* display: none; */
-        }
-        
+    <style>       
         .modal .modal-overlay {
             position: fixed;
             width: 100%;
@@ -19,6 +15,7 @@
             left: 0;
             opacity: 0;
             z-index: -1;
+            transition: .8s;
         }
         .modal.active .modal-overlay{
             opacity: 1;
@@ -36,6 +33,9 @@
             transform: translate(-50%,-50%);
             opacity: 0;
             z-index: -1;
+
+            transition: .8s;
+
         }
         .modal.active .modal-container {
             opacity: 1;
@@ -44,7 +44,7 @@
     </style>
 </head>
 <body>
-    <a href="#modal-1" data-modal="#modal-1">modal 1</a>
+    <a href="#modal-1" data-modal="#modal-1" class="modal-btn">modal 1</a>
 
     <div class="modal" id="modal-1">
         <div class="modal-overlay"></div>
@@ -61,5 +61,14 @@
             </div>
         </div>
     </div>
+    <script>
+        let modalBtn = document.querySelectorAll('.modal-btn');
+        modalBtn.forEach(btn => {
+            btn.onclick = e => {
+                let modal = e.target.dataset.modal;
+                document.querySelector(modal).classList.add('active');
+            }
+        })
+    </script>
 </body>
 </html>
