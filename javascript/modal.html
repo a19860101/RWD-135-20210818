@@ -47,7 +47,7 @@
     <a href="#modal-1" data-modal="#modal-1" class="modal-btn">modal 1</a>
 
     <div class="modal" id="modal-1">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>modal-1</h3>
@@ -69,6 +69,18 @@
                 document.querySelector(modal).classList.add('active');
             }
         })
+        document.body.onclick = e => {
+            console.log(e.target.className);
+            if(e.target.className.indexOf('modal-close') > -1){
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                })
+            }
+        }
+
+        //indexOf
+        let s = 'hello';
+        console.log(s.indexOf('z'));
     </script>
 </body>
 </html>
