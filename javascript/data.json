@@ -1,0 +1,26 @@
+[
+    {
+        "id":"精通 Python｜運用簡單的套件進行現代運算",
+        "public":"歐萊禮",
+        "author":"Bill Lubanovic 著 賴屹民 譯",
+        "price":"880"
+    },
+    {
+        "id":"30天與 Docker 做好朋友：跟鯨魚先生一同探索開發者的大平台（iT邦幫忙鐵人賽系列書）",
+        "public":"博碩文化",
+        "author":"周建毅 (Miles) ",
+        "price":"600"
+    },
+    {
+        "id":"前端三十：從 HTML 到瀏覽器渲染的前端開發者必備心法（iT邦幫忙鐵人賽系列書）",
+        "public":"博碩文化",
+        "author":"朱信穎",
+        "price":"550"
+    },
+    {
+        "id":"用 Node.js 一統 JavaScript 前後端：強勢 Web 開發親手作",
+        "public":"深智數位",
+        "author":"趙榮嬌",
+        "price":"780"
+    }
+]

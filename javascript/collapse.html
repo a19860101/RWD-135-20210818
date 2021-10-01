@@ -67,8 +67,9 @@
         let link = document.querySelectorAll('.collapse-link');
         link.forEach(btn => {
             btn.onclick = e => {
-                let href = e.target.getAttribute('href');
-                let panel = document.querySelector(href);
+                // let href = e.target.getAttribute('href');
+                // let panel = document.querySelector(href);
+                let panel = e.target.nextElementSibling;
                 
                 panel.classList.toggle('active');
 
