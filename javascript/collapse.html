@@ -29,19 +29,35 @@
             color: #0d2331;
             height: 0;
             overflow: hidden;
-            transition: .3s;
-            padding: 15px;
+            transition: .6s;
+            padding: 0 15px;
+            box-sizing: content-box;
+            border-bottom: 5px solid #80ED99;
+
            
         }
         .collapse-panel.active{
-            /* padding:15px 15px; */
+            padding:15px 15px;
         }
     </style>
 </head>
 <body>
     <div class="collapse">
-        <a href="#c1" class="collapse-link">link</a>
+        <a href="#c1" class="collapse-link">link 1</a>
         <div class="collapse-panel" id="c1">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat alias id dolore dolor ad maxime. Nostrum, aspernatur non magnam reprehenderit voluptatibus pariatur deserunt iusto, praesentium recusandae fuga suscipit aliquid maxime.
+            </p>
+        </div>
+        <a href="#c2" class="collapse-link">link 2</a>
+        <div class="collapse-panel" id="c2">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat alias id dolore dolor ad maxime. Nostrum, aspernatur non magnam reprehenderit voluptatibus pariatur deserunt iusto, praesentium recusandae fuga suscipit aliquid maxime.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat alias id dolore dolor ad maxime. Nostrum, aspernatur non magnam reprehenderit voluptatibus pariatur deserunt iusto, praesentium recusandae fuga suscipit aliquid maxime.
+            </p>
+        </div>
+        <a href="#c3" class="collapse-link">link 3</a>
+        <div class="collapse-panel" id="c3">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat alias id dolore dolor ad maxime. Nostrum, aspernatur non magnam reprehenderit voluptatibus pariatur deserunt iusto, praesentium recusandae fuga suscipit aliquid maxime.
             </p>
