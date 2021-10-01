@@ -44,5 +44,19 @@
             <img src="images/iphone-13-starlight-select-2021.png" class="thumb">
         </div>
     </div>
+    <script>
+        let thumbs = document.querySelectorAll('.thumb');
+        thumbs.forEach(thumb => {
+            thumb.onclick = e => {
+                // let src = e.target.src;
+                let newImg = e.target.getAttribute('src');
+                document.querySelector('.main-img').setAttribute('src',newImg);
+            }
+            thumb.onmouseover = e => {
+                let newImg = e.target.getAttribute('src');
+                document.querySelector('.main-img').setAttribute('src',newImg);
+            }
+        })
+    </script>
 </body>
 </html>
