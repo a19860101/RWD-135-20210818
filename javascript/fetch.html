@@ -5,16 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'segoe ui';
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        .book {
+            border-bottom: 1px solid #000;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+       
+    </div>
     <script>
         let url = 'data.json';
         fetch(url)
         .then(function(response){
             return response.json();
         })
-        .then(function(data){
-            console.log(data);
+        .then(function(datas){
+            datas.forEach(data => {
+                let book = document.createElement('div');
+                book.classList.add('book');
+
+                let h2 = document.createElement('h2');
+                h2.append(data.title);
+                
+
+                let author = document.createElement('div');
+                author.classList.add('author');
+                author.append('作者:',data.author);
+
+                let price = document.createElement('div');
+                price.classList.add('price');
+                price.append('售價:',data.price);
+
+                book.append(h2,author,price);
+
+                let container = document.querySelector('.container');
+                container.append(book);
+            })
         })
 
     </script>
