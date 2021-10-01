@@ -29,6 +29,9 @@
         .thumb:hover {
             border: 1px solid #00559b;
         }
+        .thumb.active {
+            border: 1px solid #00559b;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +40,7 @@
             <img src="images/iphone-13-pink-select-2021.png" class="main-img">
         </div>
         <div class="thumbs">
-            <img src="images/iphone-13-pink-select-2021.png" class="thumb">
+            <img src="images/iphone-13-pink-select-2021.png" class="thumb active">
             <img src="images/iphone-13-blue-select-2021.png" class="thumb">
             <img src="images/iphone-13-midnight-select-2021.png" class="thumb">
             <img src="images/iphone-13-product-red-select-2021.png" class="thumb">
@@ -51,10 +54,19 @@
                 // let src = e.target.src;
                 let newImg = e.target.getAttribute('src');
                 document.querySelector('.main-img').setAttribute('src',newImg);
+                for(t of thumbs){
+                    t.classList.remove('active');
+                }
+                e.target.classList.add('active');
             }
-            thumb.onmouseover = e => {
+            thumb.onmousemove = e => {
                 let newImg = e.target.getAttribute('src');
                 document.querySelector('.main-img').setAttribute('src',newImg);
+            }
+            thumb.onmouseout = e => {
+                let active = document.querySelector('.active').getAttribute('src');
+                console.log(active);
+                document.querySelector('.main-img').setAttribute('src',active);
             }
         })
     </script>
