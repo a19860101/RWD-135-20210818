@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .product {
+            width: 600px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+        }
+        .thumbs {
+            display: flex;
+        }
+        .thumb {
+            width: 20%;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: .4s;
+        }
+        .thumb:hover {
+            border: 1px solid #00559b;
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <div class="main">
+            <img src="images/iphone-13-pink-select-2021.png" class="main-img">
+        </div>
+        <div class="thumbs">
+            <img src="images/iphone-13-pink-select-2021.png" class="thumb">
+            <img src="images/iphone-13-blue-select-2021.png" class="thumb">
+            <img src="images/iphone-13-midnight-select-2021.png" class="thumb">
+            <img src="images/iphone-13-product-red-select-2021.png" class="thumb">
+            <img src="images/iphone-13-starlight-select-2021.png" class="thumb">
+        </div>
+    </div>
+</body>
+</html>
