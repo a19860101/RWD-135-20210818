@@ -26,5 +26,11 @@
         "public":"深智數位",
         "author":"趙榮嬌",
         "price":"780"
+    },{
+        "id":4,
+        "title":"超簡單 AIoT 物聯網與網站架設必學神器：Node-RED 視覺化開發工具",
+        "public":"博碩文化",
+        "author":"陳會安",
+        "price":"650"
     }
 ]
