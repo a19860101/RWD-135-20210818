@@ -14,13 +14,16 @@
         <div>
             {{price}}
         </div>
+        <div v-if="qty > 0">尚有庫存</div>
+        <div v-else>補貨中</div>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     title:'hello vue!!',
-                    price: 999
+                    price: 999,
+                    qty: 0
                 }
             }
         }).mount('#app');
