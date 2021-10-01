@@ -13,6 +13,7 @@
         <ul class="items">
             <li class="item"><a href="#" class="item-link">item 1</a></li>
             <li class="item"><a href="#" class="item-link">item 2</a></li>
+            <!-- test -->
             <li class="item"><a href="#" class="item-link">item 3</a></li>
             <li class="item"><a href="#" class="item-link">item 4</a></li>
         </ul>
@@ -25,6 +26,27 @@
         console.log(el.parentElement);
         //父節點
         console.log(el.parentNode);
+
+        // 子層
+        let el2 = document.querySelector('.items');
+        // 子元素
+        console.log(el2.children);   
+        // 子節點
+        console.log(el2.childNodes);
+        /* 
+            節點包括
+            1. 文字(text)->換行
+            2. 註解(comment)
+            3. 元素
+        */   
+
+        // 同輩
+        // 同輩元素
+        console.log(el2.nextElementSibling);
+        console.log(el2.previousElementSibling);
+        // 同輩節點
+        console.log(el2.nextSibling);
+        console.log(el2.previousSibling);
     </script>
 </body>
 </html>
