@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            padding: 25px 0;
+            background-color: #222;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: #eee;
+            text-decoration: none;
+            padding: 0 15px;
+            
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin: auto;
+        }
+        .item {
+            flex: 0 0 calc(100% / 3);
+            height: 400px;
+            padding: 15px;
+        }
+        .item h3 {
+            padding: 0 15px;
+        }
+        .item .content {
+            background-color: #eee;
+            height: 100%;
+            border: 1px solid #888;
+            position: relative;
+        }
+        .item-active {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            left: 0;
+            padding: 0 15px;
+        }
+        .item-img {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+        }
+        .item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <a href="#">LOGO</a>
+            <a href="#">購物車</a>
+        </nav>
+        <div class="container">
+            <div class="item" v-for="prod in products">
+                <div class="content">
+                    <div class="item-img">
+                        <img src="https://picsum.photos/id/45/800/600" alt="">
+                    </div>
+                    <h3>{{prod.title}}</h3>
+                    <!-- <img :src="img" alt=""> -->
+                    
+                    <div class="item-active">
+                        <span>
+                            NT$.{{prod.price}}
+                        </span>
+                        <button>加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const products = [
+            {
+                id:1,
+                title:'圖說演算法 -- 使用 JavaScript',
+                price:'520',
+                img:'',
+                qty:0
+            },
+            {
+                id:2,
+                title:'最輕巧前端框架首選：Vue.js 完整專案開發實作',
+                price:'780',
+                img:'',
+                qty:6
+            },
+            {
+                id:3,
+                title:'圖解資料結構 -- 使用 JavaScript',
+                price:'580',
+                img:'',
+                qty:9
+            },
+            {
+                id:4,
+                title:'最完整跨平台網頁設計：HTML + CSS + JavaScript + jQuery + Bootstrap + Google Maps 王者歸來(第二版)(全彩印刷)',
+                price:'1080',
+                img:'',
+                qty:3
+            },
+            {
+                id:5,
+                title:'從 0 到 Webpack：學習 Modern Web 專案的建置方式',
+                price:'620',
+                img:'',
+                qty:11
+            },
+
+        ]
+        Vue.createApp({
+            data(){
+                return {
+                    products:products
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
