@@ -12,13 +12,26 @@
         <h1>{{title}}</h1>
         <a v-bind:href="url">Yahoo</a>
         <a :href="url">Yahoo</a>
+
+        <form action="">
+            <input type="text" v-model="name">
+            <div>{{name}}</div>
+            <input type="radio" name="gender" value="男" v-model="gender">
+            <label for="">男</label>
+            <input type="radio" name="gender" value="女" v-model="gender">
+            <label for="">女</label>
+            <div>{{gender}}</div>
+        </form>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     title:'資料綁定',
-                    url:'https://tw.yahoo.com'          
+                    url:'https://tw.yahoo.com',
+                    name:'John',
+                    gender:''
+
                 }
             }
         }).mount('#app');
