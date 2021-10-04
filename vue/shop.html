@@ -96,6 +96,21 @@
         .cart .close {
             cursor: pointer;
         }
+        .cart-icon {
+            position: relative;
+        }
+        .cart-num {
+            position: absolute;
+            right: 0;
+            top: -10px;
+            width: 23px;
+            height: 23px;
+            background-color: #f00;
+            color: #fff;
+            line-height: 21px;
+            text-align: center;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -103,7 +118,10 @@
         <nav>
             <a href="#">LOGO</a>
             <!-- <a href="#" @click="openCart()"><i class="fas fa-shopping-cart fa-lg"></i></a> -->
-            <a href="#" @click="isOpen = true"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            <a href="#" @click="isOpen = true" class="cart-icon">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+                <span class="cart-num">{{cartItems.length}}</span>
+            </a>
         </nav>
         <div class="container">
             <div class="item" v-for="(prod,idx) in products">
