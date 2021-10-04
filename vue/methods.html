@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
-
+    <style>
+        .box {
+            background-color: #ccc;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <a href="#" v-on:click="test()">click</a>
-        <button v-on:click="test2()">click</button>
+        <button @click="test2()">click</button>
+        <div class="box" @mouseout="test2()"></div>
     </div>    
     <script>
         Vue.createApp({
