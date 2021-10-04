@@ -14,13 +14,13 @@
         <div>
             {{price}}
         </div>
-        <div v-if="qty > 0">尚有庫存</div>
+        <div v-if="qty > 10">庫存充足</div>
+        <div v-else-if="qty > 0">低庫存</div>
         <div v-else>補貨中</div>
         <div v-for="(prod,idx) of products">
             <h2>{{prod.title}}</h2>
             <div>作者:{{prod.author}}</div>
             <div>售價:{{prod.price}}</div>
-            <div>{{idx}}</div>
         </div>
     </div>
     <script>
@@ -29,7 +29,7 @@
                 return {
                     title:'hello vue!!',
                     price: 999,
-                    qty: 0,
+                    qty: 18,
                     products:[
                         {
                             "id":1,
