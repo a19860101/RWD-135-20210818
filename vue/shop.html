@@ -106,7 +106,7 @@
             <a href="#" @click="isOpen = true"><i class="fas fa-shopping-cart fa-lg"></i></a>
         </nav>
         <div class="container">
-            <div class="item" v-for="prod in products">
+            <div class="item" v-for="(prod,idx) in products">
                 <div class="content">
                     <div class="item-img">
                         <img :src="`images/${prod.img}`" alt="">
@@ -117,7 +117,7 @@
                         <span>
                             NT$.{{prod.price}}
                         </span>
-                        <button>加入購物車</button>
+                        <button @click="addToCart(idx)">加入購物車</button>
                     </div>
                 </div>
             </div>
@@ -131,8 +131,14 @@
             </div>
             <hr>
             <div class="cart-container">                
-                <div v-if="cartItems.length > 0">
-                    {{cartItems}}
+                <div v-if="cartItems.length > 0" class="cart-items">
+                    <div v-for="item in cartItems" class="cart-item">
+                        <br>
+                        <h3>{{item.title}}</h3>
+                        <div>NT.${{item.price}}</div>
+                        <br>
+                        <hr>
+                    </div>
                 </div>
                 <div v-else>空的喔!!</div>
             </div>
@@ -191,6 +197,10 @@
                 },
                 closeCart(){
                     this.isOpen = false;
+                },
+                addToCart(idx){
+                    // console.log(this.products[idx])
+                    this.cartItems.push(this.products[idx]);
                 }
             }
         }).mount('#app');
