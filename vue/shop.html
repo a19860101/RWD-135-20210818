@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://unpkg.com/vue@next"></script>
     <style>
         * {
@@ -30,8 +31,9 @@
         .container {
             display: flex;
             flex-wrap: wrap;
-            width: 1200px;
+            max-width: 1200px;
             margin: auto;
+            align-items: center;
         }
         .item {
             flex: 0 0 calc(100% / 3);
@@ -73,16 +75,16 @@
     <div id="app">
         <nav>
             <a href="#">LOGO</a>
-            <a href="#">購物車</a>
+            <a href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
         </nav>
         <div class="container">
             <div class="item" v-for="prod in products">
                 <div class="content">
                     <div class="item-img">
-                        <img src="https://picsum.photos/id/45/800/600" alt="">
+                        <!-- <img src="https://picsum.photos/id/45/800/600" alt=""> -->
+                        <img :src="`images/${prod.img}`" alt="">
                     </div>
                     <h3>{{prod.title}}</h3>
-                    <!-- <img :src="img" alt=""> -->
                     
                     <div class="item-active">
                         <span>
@@ -100,35 +102,35 @@
                 id:1,
                 title:'圖說演算法 -- 使用 JavaScript',
                 price:'520',
-                img:'',
+                img:'9789864348909_bc.jpg',
                 qty:0
             },
             {
                 id:2,
                 title:'最輕巧前端框架首選：Vue.js 完整專案開發實作',
                 price:'780',
-                img:'',
+                img:'DM2144_3D-750x933.jpg',
                 qty:6
             },
             {
                 id:3,
                 title:'圖解資料結構 -- 使用 JavaScript',
                 price:'580',
-                img:'',
+                img:'9789864348930_bc.jpg',
                 qty:9
             },
             {
                 id:4,
                 title:'最完整跨平台網頁設計：HTML + CSS + JavaScript + jQuery + Bootstrap + Google Maps 王者歸來(第二版)(全彩印刷)',
                 price:'1080',
-                img:'',
+                img:'DM2146_3D.jpg',
                 qty:3
             },
             {
                 id:5,
                 title:'從 0 到 Webpack：學習 Modern Web 專案的建置方式',
                 price:'620',
-                img:'',
+                img:'MP22161.jpg',
                 qty:11
             },
 
