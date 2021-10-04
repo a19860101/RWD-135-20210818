@@ -14,6 +14,9 @@
             box-sizing: border-box;
             font-family: 'Segoe UI';
         }
+        body {
+            background-color: #f3f3f3;
+        }
         nav {
             width: 100%;
             display: flex;
@@ -79,6 +82,7 @@
             background-color: #fff;
             box-shadow: 0;
             transform: translateX(100%);
+            transition: .6s;
         }
         .cart.active {
             transform: translateX(0);
@@ -98,7 +102,7 @@
     <div id="app">
         <nav>
             <a href="#">LOGO</a>
-            <a href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            <a href="#" @click="openCart()"><i class="fas fa-shopping-cart fa-lg"></i></a>
         </nav>
         <div class="container">
             <div class="item" v-for="prod in products">
@@ -118,10 +122,10 @@
                 </div>
             </div>
         </div>
-        <div class="cart">
+        <div class="cart" :class="{active:isOpen}">
             <div class="cart-nav">
                 <h3>購物車</h3>
-                <i class="fas fa-times fa-2x close"></i>
+                <i class="fas fa-times fa-2x close" @click="closeCart()"></i>
             </div>
         </div>
     </div>
@@ -167,7 +171,16 @@
         Vue.createApp({
             data(){
                 return {
-                    products:products
+                    products:products,
+                    isOpen: false
+                }
+            },
+            methods:{
+                openCart(){
+                    this.isOpen = true;
+                },
+                closeCart(){
+                    this.isOpen = false;
                 }
             }
         }).mount('#app');
