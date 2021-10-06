@@ -167,6 +167,7 @@
             </div>
         </div>
         {{priceArray}}
+        {{total}}
     </div>
     <script>
         const products = [
@@ -239,7 +240,17 @@
                     //     return data.price;
                     // })
                     return this.cartItems.map(data=>data.price);
+                },
+                total(){
+                    if(this.cartItems.length > 0){
+                        // return this.priceArray.reduce(function(a,b){
+                            // return Number(a)+Number(b)
+                            // return parseInt(a)+parseInt(b);
+                        // })
+                        return this.priceArray.reduce((a,b)=>parseInt(a)+parseInt(b));
+                    }
                 }
+
             }
         }).mount('#app');
     </script>
