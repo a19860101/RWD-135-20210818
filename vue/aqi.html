@@ -36,10 +36,8 @@
 <body>
     <div id="app">
         <div class="selected">
-            <select name="" id="">
-                <template v-for="(sn,idx) in SiteName">
-                    <option :value="idx">{{sn}}</option>
-                </template>
+            <select name="" id="" v-model="city">
+                <option v-for="(sn,idx) in SiteName" :value="sn">{{sn}}</option>
             </select>
         </div>
         <div class="container">
@@ -61,7 +59,8 @@
         Vue.createApp({
             data(){
                 return {
-                    datas:[]
+                    datas:[],
+                    city:''
                 }
             },
             computed:{
