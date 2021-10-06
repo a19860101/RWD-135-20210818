@@ -166,6 +166,7 @@
                 <div v-else>空的喔!!</div>
             </div>
         </div>
+        {{priceArray}}
     </div>
     <script>
         const products = [
@@ -230,6 +231,14 @@
                 },
                 removeCart(idx){
                     this.cartItems.splice(idx,1);
+                }
+            },
+            computed:{
+                priceArray(){
+                    // return this.cartItems.map(function(data){
+                    //     return data.price;
+                    // })
+                    return this.cartItems.map(data=>data.price);
                 }
             }
         }).mount('#app');
