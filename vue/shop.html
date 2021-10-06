@@ -155,8 +155,12 @@
                         <h3>{{item.title}}</h3>
                         <div>NT.${{item.price}}</div>
                         <br>
+                        
                         <hr>
                     </div>
+                    <br>
+                    <button @click="clearCart()">清除購物車</button>
+                    <br>
                 </div>
                 <div v-else>空的喔!!</div>
             </div>
@@ -219,6 +223,9 @@
                 addToCart(idx){
                     // console.log(this.products[idx])
                     this.cartItems.push(this.products[idx]);
+                },
+                clearCart(){
+                    this.cartItems.length = 0;
                 }
             }
         }).mount('#app');
