@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app"></div>    
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    datas:[]
+                }
+            },
+            created(){
+                let url = 'https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json';
+                fetch(url)
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data.records);
+                })
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
