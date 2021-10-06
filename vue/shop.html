@@ -150,10 +150,11 @@
             <hr>
             <div class="cart-container">                
                 <div v-if="cartItems.length > 0" class="cart-items">
-                    <div v-for="item in cartItems" class="cart-item">
+                    <div v-for="(item,idx) in cartItems" class="cart-item">
                         <br>
                         <h3>{{item.title}}</h3>
                         <div>NT.${{item.price}}</div>
+                        <a href="#" @click="removeCart(idx)">移除</a>
                         <br>
                         
                         <hr>
@@ -226,6 +227,9 @@
                 },
                 clearCart(){
                     this.cartItems.length = 0;
+                },
+                removeCart(idx){
+                    this.cartItems.splice(idx,1);
                 }
             }
         }).mount('#app');
