@@ -159,6 +159,7 @@
                         
                         <hr>
                     </div>
+                    <div>總金額:{{total2}}</div>
                     <br>
                     <button @click="clearCart()">清除購物車</button>
                     <br>
@@ -166,8 +167,6 @@
                 <div v-else>空的喔!!</div>
             </div>
         </div>
-        {{priceArray}}
-        {{total}}
     </div>
     <script>
         const products = [
@@ -248,6 +247,11 @@
                             // return parseInt(a)+parseInt(b);
                         // })
                         return this.priceArray.reduce((a,b)=>parseInt(a)+parseInt(b));
+                    }
+                },
+                total2(){
+                    if(this.cartItems.length > 0){
+                        return this.cartItems.map(data=>data.price).reduce((a,b)=>parseInt(a)+parseInt(b));
                     }
                 }
 
