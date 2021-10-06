@@ -37,8 +37,11 @@
 <body>
     <div id="app">
         <div class="selected">
-            <select name="" id="" v-model="city">
+            <!-- <select name="" id="" v-model="city">
                 <option v-for="(sn,idx) in SiteName" :value="sn">{{sn}}</option>
+            </select> -->
+            <select name="" id="" v-model="county">
+                <option v-for="(ct) in County" :value="ct">{{ct}}</option>
             </select>
         </div>
         <div class="container">
@@ -62,15 +65,21 @@
             data(){
                 return {
                     datas:[],
-                    city:''
+                    city:'',
+                    county:''
                 }
             },
             computed:{
                 SiteName(){
                     return this.datas.map(data => data.SiteName);
                 },
+                County(){
+                    let county = this.datas.map(data => data.County);
+                    return [...new Set(county)];
+                },
                 results(){
-                    return this.datas.filter(data => data.SiteName == this.city);
+                    // return this.datas.filter(data => data.SiteName == this.city);
+                    return this.datas.filter(data => data.County == this.county);
                 }
             },
             created(){
