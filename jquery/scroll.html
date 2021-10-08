@@ -61,8 +61,11 @@
                 // getAttribute,setAttribute
                 let target = $(this).data('target');
                 // dataset.target
+                let offset = $(target).offset().top;
 
-                console.log(target);
+                $('html,body').animate({
+                    scrollTop: offset
+                });
             })
         })
     </script>
