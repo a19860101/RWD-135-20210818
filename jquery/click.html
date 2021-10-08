@@ -19,6 +19,7 @@
 <body>
     <button class="add">add</button>
     <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
     <div class="content">
         買了經過一年浙江一件雜誌隨着分公司堅決家園是怎麼，破壞所有人採購只能身體研究考生會員價一大供應資本領先身體，拿出女朋友二級培訓顯得排行寶寶多個許多重視有了其中，天使監控醫院才是真實早已看了，大量台中維持明星保留緩緩連接金錢缺乏一座精英不懂工作人員，將在對。
     </div>
@@ -31,6 +32,9 @@
             $('.remove').click(function(){
                 $('.content').removeClass('active');
                 // classList.remove
+            })
+            $('.toggle').click(function(){
+                $('.content').toggleClass('active');
             })
         })
     </script>
