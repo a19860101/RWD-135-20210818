@@ -41,6 +41,31 @@
         #service {background-color: #6F69AC;}
         #product {background-color: #FFEBA1;}
         #contact {background-color: #FD6F96;}
+
+        .gotop {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-color: #222;
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .gotop::after {
+            content:'';
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-top: 5px solid #fff;
+            border-left: 5px solid #fff;
+            transform: rotate(45deg);
+            position: relative;
+            top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -53,7 +78,9 @@
     <div id="about" class="container"></div>
     <div id="service" class="container"></div>
     <div id="product" class="container"></div>
-    <div id="contact" class="container"></div>
+    <div id="contact" class="container"></div> 
+
+    <a href="#" class="gotop"></a>
     <script>
         $(function(){
             $('nav').find('a').click(function(){
