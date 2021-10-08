@@ -22,11 +22,17 @@
             padding: 15px;
             border-bottom: 5px solid #ff6666;
             cursor: pointer;
+            transition: .6s;
+        }
+        h2:hover {
+            border-bottom-color: #FFFEB7;
+        }
+        h2.active {
+            border-bottom-color: #FFFEB7;
         }
         .content {
             background-color: #FFDAC7;
             padding:15px;
-            border-bottom: 5px solid #ff9a9a;
             display: none;
 
         }
@@ -60,12 +66,11 @@
     </div>
     <script>
         $(function(){
-            // let h = $('.content').Height();
-            // console.log(h);
             $('h2').click(function(){
                 // $(this).next().toggle(600);
                 // $(this).next().fadeToggle();
                 $(this).next().slideToggle();
+                $(this).toggleClass('active');
             })
         })
     </script>
