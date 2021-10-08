@@ -21,14 +21,17 @@
             background-color: #FFADAD;
             padding: 15px;
             border-bottom: 5px solid #ff6666;
-
+            cursor: pointer;
         }
         .content {
             background-color: #FFDAC7;
-            padding: 15px;
+            padding:15px;
             border-bottom: 5px solid #ff9a9a;
             display: none;
 
+        }
+        .content.active{
+            display: block;
         }
     </style>
 </head>
@@ -55,6 +58,16 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sit, asperiores ab maiores corporis unde dolorum eum, eaque labore, et obcaecati quo ipsum adipisci placeat. Molestiae facere nemo placeat quod.</p>
         </div>
     </div>
-
+    <script>
+        $(function(){
+            // let h = $('.content').Height();
+            // console.log(h);
+            $('h2').click(function(){
+                // $(this).next().toggle(600);
+                // $(this).next().fadeToggle();
+                $(this).next().slideToggle();
+            })
+        })
+    </script>
 </body>
 </html>
