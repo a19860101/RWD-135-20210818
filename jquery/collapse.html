@@ -39,26 +39,47 @@
         .content.active{
             display: block;
         }
+
+        h2 .arrow {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-left: 5px solid #000;
+            border-top: 5px solid #000;
+            float: right;
+            transform:rotate(-135deg);
+            position: relative;
+            top: 0;
+            right: 8px;
+            transition: .6s;
+        }
+        h2.active .arrow {
+            top: 8px;
+            transform:rotate(45deg);
+        }
     </style>
 </head>
 <body>
     <div class="collapse">
-        <h2>title 1</h2>
+        <h2>
+            title 1
+            <span class="arrow"></span>
+        </h2>
         <div class="content">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum similique voluptatum quis culpa ex nobis, unde, numquam sapiente id facilis officiis, eveniet dolore. Quaerat, aliquid? Quidem et quia blanditiis pariatur!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sit, asperiores ab maiores corporis unde dolorum eum, eaque labore, et obcaecati quo ipsum adipisci placeat. Molestiae facere nemo placeat quod.</p>
         </div>
-        <h2>title 2</h2>
+        <h2>title 2 <span class="arrow"></span></h2>
         <div class="content">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum similique voluptatum quis culpa ex nobis, unde, numquam sapiente id facilis officiis, eveniet dolore. Quaerat, aliquid? Quidem et quia blanditiis pariatur!</p>
         </div>
-        <h2>title 3</h2>
+        <h2>title 3 <span class="arrow"></span></h2>
         <div class="content">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum similique voluptatum quis culpa ex nobis, unde, numquam sapiente id facilis officiis, eveniet dolore. Quaerat, aliquid? Quidem et quia blanditiis pariatur!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sit, asperiores ab maiores corporis unde dolorum eum, eaque labore, et obcaecati quo ipsum adipisci placeat. Molestiae facere nemo placeat quod.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sit, asperiores ab maiores corporis unde dolorum eum, eaque labore, et obcaecati quo ipsum adipisci placeat. Molestiae facere nemo placeat quod.</p>
         </div>
-        <h2>title 4</h2>
+        <h2>title 4 <span class="arrow"></span></h2>
         <div class="content">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum similique voluptatum quis culpa ex nobis, unde, numquam sapiente id facilis officiis, eveniet dolore. Quaerat, aliquid? Quidem et quia blanditiis pariatur!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sit, asperiores ab maiores corporis unde dolorum eum, eaque labore, et obcaecati quo ipsum adipisci placeat. Molestiae facere nemo placeat quod.</p>
