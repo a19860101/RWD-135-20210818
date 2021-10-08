@@ -43,9 +43,8 @@
         #contact {background-color: #FD6F96;}
 
         .gotop {
-            display: block;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background-color: #222;
             position: fixed;
             right: 15px;
@@ -54,17 +53,23 @@
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+            
+            transform: translateY(200%);
+            transition: .6s;
         }
         .gotop::after {
             content:'';
             display: block;
-            width: 16px;
-            height: 16px;
+            width: 12px;
+            height: 12px;
             border-top: 5px solid #fff;
             border-left: 5px solid #fff;
             transform: rotate(45deg);
             position: relative;
             top: 5px;
+        }
+        .gotop.active{
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -101,6 +106,17 @@
                     scrollTop:0
                 },speed)
             })
+            // $('.gotop').hide();
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                if(h > 600){
+                    $('.gotop').addClass('active')
+                    // $('.gotop').fadeIn();
+                }else{
+                    $('.gotop').removeClass('active');
+                    // $('.gotop').fadeOut();
+                }
+            });
         })
     </script>
 </body>
