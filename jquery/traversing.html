@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">title</h1>
+        <p class="content">因而今日十大財產陷入小七哥哥訊息並且完善衣服魔法聯想，聯繫電話展開教師聯絡人秘密轉身表明，湖北上帝，一番道德安排工藝，還在體制查找集中經理不是很，原來真實細節協調激烈星座，屬性承擔五年尤其是你怎不來水果通訊整理保健整合緊急無論同學，更新時間臺東兩個，節省。</p>
+        <ul class="items">
+            <li class="item"><a href="#" class="item-link">item 1</a></li>
+            <li class="item"><a href="#" class="item-link">item 2</a></li>
+            <!-- test -->
+            <li class="item"><a href="#" class="item-link">item 3</a></li>
+            <li class="item"><a href="#" class="item-link">item 4</a></li>
+        </ul>
+        <a href="#" class="link">Link</a>
+    </div>
+    <script>
+        $(function(){
+            // 父元素
+            // let el = $('.item').parent();
+            // let el = $('.item').parents();
+            // let el = $('.item').parents('.container');
+            // let el = $('.item').closest('.container');
+            
+            // 子元素
+            // let el = $('.container').children();
+            // let el = $('.container').children('.content');
+            // let el = $('.container').find('.item-link');
+            
+            // 同輩
+            // let el = $('.content').next();
+            // let el = $('.content').prev();
+            // let el = $('.content').siblings();
+            let el = $('.item-link').eq(1);
+            // 只能選取完全相同的元素
+
+
+            console.log(el);
+        })
+    </script>
+</body>
+</html>
