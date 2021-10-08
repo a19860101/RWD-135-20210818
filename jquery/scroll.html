@@ -19,6 +19,9 @@
             align-items: center;
             height: 70px;
             background-color: #222;
+            width: 100%;
+            position: fixed;
+            top: 0;
         }
         nav a {
             color: #eee;
@@ -42,14 +45,26 @@
 </head>
 <body>
     <nav>
-        <a href="#">About</a>
-        <a href="#">Service</a>
-        <a href="#">Product</a>
-        <a href="#">Contact</a>
+        <a href="#about" data-target="#about">About</a>
+        <a href="#service" data-target="#service">Service</a>
+        <a href="#product" data-target="#product">Product</a>
+        <a href="#contact" data-target="#contact">Contact</a>
     </nav>
     <div id="about" class="container"></div>
     <div id="service" class="container"></div>
     <div id="product" class="container"></div>
     <div id="contact" class="container"></div>
+    <script>
+        $(function(){
+            $('nav').find('a').click(function(){
+                // let target = $(this).attr('href');
+                // getAttribute,setAttribute
+                let target = $(this).data('target');
+                // dataset.target
+
+                console.log(target);
+            })
+        })
+    </script>
 </body>
 </html>
