@@ -90,9 +90,16 @@
                 // dataset.target
                 let offset = $(target).offset().top;
 
+                let speed = 1200;
                 $('html,body').animate({
                     scrollTop: offset
-                });
+                },speed);
+            })
+            $('.gotop').click(function(){
+                let speed = 1200;
+                $('html,body').animate({
+                    scrollTop:0
+                },speed)
             })
         })
     </script>
