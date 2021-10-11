@@ -214,9 +214,9 @@
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 if(h > 600){
-                    $('.gotop').addClass('active');
+                    $('.gotop,nav').addClass('active');
                 }else{
-                    $('.gotop').removeClass('active');
+                    $('.gotop,nav').removeClass('active');
                 }
 
                 $('.menu').find('a').each(function(){
