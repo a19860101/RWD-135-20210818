@@ -81,7 +81,7 @@
 </head>
 <body>
     <nav>
-        <a href="#about" data-target="#about">About</a>
+        <a href="#about" data-target="#about" class="active">About</a>
         <a href="#service" data-target="#service">Service</a>
         <a href="#product" data-target="#product">Product</a>
         <a href="#contact" data-target="#contact">Contact</a>
@@ -129,6 +129,17 @@
                     // $('.gotop').removeClass('active');
                     $('.gotop').fadeOut();
                 }
+
+                $('nav').find('a').each(function(){
+                    let target = $(this).data('target');
+                    let offset = $(target).offset().top;
+                    // console.log(offset);
+                    console.log(h)
+                    if(h > offset - 100){
+                        $('nav').find('a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
             });
         })
     </script>
