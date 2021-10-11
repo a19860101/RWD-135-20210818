@@ -28,8 +28,14 @@
             padding: 15px;
             text-decoration: none;
             transition: .4s;
+
+            border-radius: 5px;
         }
         nav a:hover {
+            background-color: #FFFEB7;
+            color: #222;
+        }
+        nav a.active {
             background-color: #FFFEB7;
             color: #222;
         }
@@ -95,10 +101,13 @@
                 // dataset.target
                 let offset = $(target).offset().top;
 
-                let speed = 1200;
+                let speed = 600;
                 $('html,body').animate({
                     scrollTop: offset
                 },speed);
+                
+                $('nav').find('a').removeClass('active');
+                $(this).addClass('active');
 
                 return false;
             })
