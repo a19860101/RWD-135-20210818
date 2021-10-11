@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RWD Layout</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/grid.css">
@@ -16,7 +17,7 @@
         <a href="#" class="nav-toggle">
             <i class="fas fa-bars fa-lg"></i>
         </a>
-        <div>
+        <div class="menu">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
@@ -182,5 +183,20 @@
             巨匠電腦有限公司
         </div>
     </footer>
+    <script>
+        $(function(){
+            $('.nav-toggle').click(function(){
+                $('.menu').toggle(600);
+            })
+            $(window).resize(function(){
+                let w = $(window).width();
+                if(w > 520){
+                    $('.menu').show();
+                }else{
+                    $('.menu').hide();
+                }
+            })
+        })
+    </script>
 </body>
 </html>

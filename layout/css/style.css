@@ -6,7 +6,7 @@ nav {
     position: relative;
 }
 nav .logo {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     display: block;
     font-size: 32px;
     font-weight: bold;
@@ -20,6 +20,9 @@ nav a {
     padding-bottom: 10px;
     text-align: left;
 }
+nav .menu {
+    display: none;
+}
 .nav-toggle {
     /* width: 20px; */
     /* height: 20px; */
@@ -27,9 +30,13 @@ nav a {
     /* background-color: #f00; */
     position: absolute;
     right: 25px;
-    top: 25px;
+    top: 30px;
 }
 @media(min-width: 520px){
+    nav .logo {
+        margin-bottom: 15px;
+
+    }
     nav a {
         display: inline-block;
         padding-bottom: 0px;
@@ -37,6 +44,9 @@ nav a {
     }
     .nav-toggle {
         display: none;
+    }
+    nav .menu {
+        display: block;
     }
 }
 
