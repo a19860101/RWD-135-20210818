@@ -32,8 +32,24 @@
             
         }
         .menu {
-            display: none;
+            /* display: none; */
             padding-top: 15px;
+            background-color: rgba(24, 24, 24, 0.9);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            transform: translateX(100%);
+            transition: .6s
+        }
+        .menu.active {
+            transform:translateX(0);
         }
         .menu-link {
             padding: 15px 10px;
@@ -44,6 +60,14 @@
             color: #fff;
             right: 20px;
             top: 20px;
+            /* z-index: 999; */
+        }
+        .close {
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            color: #fff;
+            cursor: pointer;
         }
         @media (min-width: 720px){
             nav {
@@ -57,12 +81,19 @@
             .menu {
                 display: block;
                 padding-top: 0;
+                width: initial;
+                height: initial;
+                position: static;
+                transform:translateX(0)
             }
             .menu-link {
                 padding: 0 10px;
                 display: inline-block;
             }
             .toggle-btn {
+                display: none;
+            }
+            .close {
                 display: none;
             }
         }
@@ -77,15 +108,17 @@
             <a href="#" class="menu-link">Link 2</a>
             <a href="#" class="menu-link">Link 3</a>
             <a href="#" class="menu-link">Link 4</a>
+            <i class="fas fa-times fa-2x close"></i>
         </div>
     </nav>
     <script>
         $(function(){
             $('.toggle-btn').click(function(){
-                // console.log('btn');
-                $('.menu').toggle(600);
-                // $('.menu').slideToggle();
-                // $('.menu').fadeToggle();
+                // $('.menu').toggleClass('active');
+                $('.menu').addClass('active');
+            })
+            $('.close').click(function(){
+                $('.menu').removeClass('active');
             })
         })
     </script>
