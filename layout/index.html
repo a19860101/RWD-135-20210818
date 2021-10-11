@@ -218,6 +218,15 @@
                 }else{
                     $('.gotop').removeClass('active');
                 }
+
+                $('.menu').find('a').each(function(){
+                    let target = $(this).data('target');
+                    let offset = $(target).offset().top;
+                    if(h > offset - 100){
+                        $('nav ').find('a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
             });
         })
     </script>

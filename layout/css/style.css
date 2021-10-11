@@ -26,6 +26,15 @@ nav a {
 nav .menu {
     display: none;
 }
+.menu a {
+    transition: .5s;
+}
+.menu a:hover {
+    color: #FD6F96;
+}
+.menu a.active {
+    color: #FD6F96;
+}
 .nav-toggle {
     /* width: 20px; */
     /* height: 20px; */
