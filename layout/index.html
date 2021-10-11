@@ -211,6 +211,14 @@
                 })
                 return false;
             })
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                if(h > 600){
+                    $('.gotop').addClass('active');
+                }else{
+                    $('.gotop').removeClass('active');
+                }
+            });
         })
     </script>
 </body>
