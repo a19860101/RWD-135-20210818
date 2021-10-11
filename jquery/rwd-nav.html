@@ -87,6 +87,15 @@
                 // $('.menu').slideToggle();
                 // $('.menu').fadeToggle();
             })
+            $(window).resize(function(){
+                let w = $(window).width();
+                console.log(w);
+                if(w > 720){
+                    $('.menu').show();
+                }else{
+                    $('.menu').hide();
+                }
+            })
         })
     </script>
 </body>
