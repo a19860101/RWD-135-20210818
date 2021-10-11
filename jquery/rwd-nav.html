@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <style>
         * {
@@ -32,6 +33,7 @@
         }
         .menu {
             display: none;
+            padding-top: 15px;
         }
         .menu-link {
             padding: 15px 10px;
@@ -75,7 +77,16 @@
             <a href="#" class="menu-link">Link 3</a>
             <a href="#" class="menu-link">Link 4</a>
         </div>
-
     </nav>
+    <script>
+        $(function(){
+            $('.toggle-btn').click(function(){
+                // console.log('btn');
+                $('.menu').toggle(600);
+                // $('.menu').slideToggle();
+                // $('.menu').fadeToggle();
+            })
+        })
+    </script>
 </body>
 </html>
