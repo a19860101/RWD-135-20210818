@@ -22,7 +22,8 @@
             width: 100%;
         }
         .products {
-            width: 1200px;
+            width: 80%;
+            max-width: 1200px;
             margin: auto;
         }
         img {
@@ -109,8 +110,25 @@
 
             });
             $('.products').slick({
-                slidesToShow: 5,
+                slidesToShow: 6,
                 slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            arrows: true,
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            arrows: true
+                        }
+                    }
+                ]
+
             })
         })
     </script>
