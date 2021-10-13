@@ -13,12 +13,16 @@
         body {
             background-color: #00abee;
         }
-        header {
+        header,.products {
             width: 1200px;
             margin: auto;
         }
         img {
             width: 100%;
+        }
+        .product-item {
+            margin-left: 5px;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -40,6 +44,39 @@
             <img src="https://picsum.photos/id/59/1600/800" alt="">
         </div>
     </header>
+    <br><br><br><br>
+    <div class="products">
+        <div class="product-item">
+            <img src="https://picsum.photos/id/18/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/28/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/38/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/48/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/58/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/68/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/78/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/88/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/98/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/108/600" alt="">
+        </div>
+    </div>
     <script>
         $(function(){
             $('header').slick({
@@ -50,6 +87,10 @@
                 arrows: false
 
             });
+            $('.products').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+            })
         })
     </script>
 </body>
