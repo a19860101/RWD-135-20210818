@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -15,7 +18,7 @@
         header {
             width: 100%;
             height: 100vh;
-            background: url('https://picsum.photos/id/87/1800/1000') no-repeat center / cover;
+            background: url('https://picsum.photos/id/1018/1800/1000') no-repeat center / cover;
         }
         .container {
             display: flex;
@@ -44,53 +47,70 @@
         .container:nth-of-type(4){
             background-color: #B980F0;
         }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 120px;
+        }
+        header p {
+            font-size: 24px;
+            width: 50%;
+        }
     </style>
 </head>
 <body>
     <header>
-
+        <h1 class="wow rotateIn">WOW JS</h1>
+        <p class="wow fadeInUp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum laborum minus, fugiat aliquam unde doloremque explicabo quis! Voluptatem, minus saepe.</p>
     </header>
     <div class="container">
-        <div class="item">
+        <div class="item wow fadeInLeft">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laboriosam placeat? Impedit odit in rerum ducimus laboriosam atque nulla eaque. Eaque nostrum id eos inventore magni sapiente, sint molestiae. Ratione!
         </div>
-        <div class="item">
+        <div class="item wow fadeInUp">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laboriosam placeat? Impedit odit in rerum ducimus laboriosam atque nulla eaque. Eaque nostrum id eos inventore magni sapiente, sint molestiae. Ratione!
         </div>
-        <div class="item">
+        <div class="item wow fadeInRight">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laboriosam placeat? Impedit odit in rerum ducimus laboriosam atque nulla eaque. Eaque nostrum id eos inventore magni sapiente, sint molestiae. Ratione!
         </div>
     </div>
     <div class="container">
-        <div class="item">
+        <div class="item wow fadeInLeft">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus suscipit ex magni magnam impedit debitis dicta quidem, tempora fugiat nisi? Magnam nesciunt, ducimus deserunt quis vero neque ullam beatae molestiae.
         </div>
-        <div class="item">
+        <div class="item wow fadeInUp">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus suscipit ex magni magnam impedit debitis dicta quidem, tempora fugiat nisi? Magnam nesciunt, ducimus deserunt quis vero neque ullam beatae molestiae.
         </div>
-        <div class="item">
+        <div class="item wow fadeInDown">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus suscipit ex magni magnam impedit debitis dicta quidem, tempora fugiat nisi? Magnam nesciunt, ducimus deserunt quis vero neque ullam beatae molestiae.
         </div>
-        <div class="item">
+        <div class="item wow fadeInRight">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus suscipit ex magni magnam impedit debitis dicta quidem, tempora fugiat nisi? Magnam nesciunt, ducimus deserunt quis vero neque ullam beatae molestiae.
         </div>
     </div>
     <div class="container">
-        <div class="item">
+        <div class="item wow fadeInLeft">
             <img src="https://picsum.photos/id/99/800/600" alt="">
         </div>
-        <div class="item">
+        <div class="item wow fadeInRight">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt optio atque eligendi, nostrum dicta delectus quaerat architecto asperiores. Dolorum natus vitae asperiores earum provident perspiciatis minima ullam architecto, suscipit nemo!
         </div>
     </div>
     <div class="container">
-        <div class="item">
+        <div class="item wow fadeInLeft">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt optio atque eligendi, nostrum dicta delectus quaerat architecto asperiores. Dolorum natus vitae asperiores earum provident perspiciatis minima ullam architecto, suscipit nemo!
         </div>
-        <div class="item">
+        <div class="item wow fadeInRight">
             <img src="https://picsum.photos/id/92/800/600" alt="">
         </div>
     </div>
-
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
