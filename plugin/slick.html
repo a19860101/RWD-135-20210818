@@ -32,6 +32,17 @@
             margin-left: 5px;
             margin-right: 5px;
         }
+
+        .item {
+            background-color: #000;
+        }
+        header .slick-slide img {
+            opacity: .3;
+            transition: .6s;
+        }
+        header .slick-slide.slick-current img {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -91,7 +102,7 @@
                 autoplay:true,
                 autoplaySpeed: 5000,
                 speed: 1000,
-                dots:false,
+                dots:true,
                 arrows: false,
                 centerMode: true,
                 centerPadding: '200px'
